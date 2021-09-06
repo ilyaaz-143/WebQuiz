@@ -1,13 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+.Sub-link {
+  text-decoration: none;
+  width: 200px;
+  padding: 10px;
+  /* background-color: aqua; */
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+.Sub-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: greenyellow;
+  top: 0;
+}
+.Sub-link:nth-child(2)::before {
+  background-color: rebeccapurple;
+}
+.Sub-link:nth-child(3)::before {
+  background-color: cyan;
+}
+.Questions {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Questions .button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  align-self: center;
+}
+.linkHome {
+  align-self: baseline;
+  color: white;
+  /* padding: ; */
+}
+.MuiFormControl-root {
+  width: 30vw;
+}
+@media screen and (max-width: 600px) {
+  .Questions {
+    width: 80vw;
+  }
+  .MuiFormControl-root {
+    width: 90vw;
+  }
 }
